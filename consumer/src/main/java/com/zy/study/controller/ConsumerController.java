@@ -27,8 +27,8 @@ public class ConsumerController {
     @Resource
     private RestTemplate restTemplate;
 
-//    @Resource
-//    private HttpHeaders httpHeaders;
+    @Resource
+    private HttpHeaders httpHeaders;
 
     @Resource
     private LoadBalancerClient loadBalancerClient;
