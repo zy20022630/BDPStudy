@@ -27,6 +27,7 @@ public class ConsumerController {
     @Resource
     private RestTemplate restTemplate;
 
+    //测试版本：V0.6
 //    @Resource
 //    private HttpHeaders httpHeaders;
 
