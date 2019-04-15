@@ -1,0 +1,28 @@
+server:
+  port: 8083
+
+
+eureka:
+  client: # 客户端进行Eureka注册的配置
+    service-url:
+      defaultZone: http://eureka:eureka@eureka1:7001/eureka,http://eureka:eureka@eureka2:7002/eureka,http://eureka:eureka@eureka3:7003/eureka
+  instance:
+    instance-id: provider3
+    hostname: provider3
+    prefer-ip-address: true
+
+
+spring:
+  application:
+    name: provider
+
+
+logging:
+  level:
+    com.zy.study.mapper: debug
+
+info:
+  app.name: provider3
+  company.name: study
+  build.artifactId: $project.artifactId$
+  build.modelVersion: $project.modelVersion$

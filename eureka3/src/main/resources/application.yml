@@ -1,0 +1,32 @@
+server:
+  port: 7003
+
+
+eureka:
+  instance: # eureak实例定义
+    instance-id: eureka3
+    hostname: eureka3 # 定义 Eureka 实例所在的主机名称
+    lease-renewal-interval-in-seconds: 2      # 设置心跳的时间间隔（默认是30秒）
+    lease-expiration-duration-in-seconds: 5   # 如果现在超过了5秒的间隔（默认是90秒）
+    prefer-ip-address: false
+
+  server:
+    eviction-interval-timer-in-ms: 10000 #设置清理的间隔时间，而后这个时间使用的是毫秒单位（默认是60秒）
+    enable-self-preservation: false     #设置为false表示关闭保护模式
+
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://eureka:eureka@eureka1:7001/eureka,http://eureka:eureka@eureka2:7002/eureka
+
+
+spring:
+  application:
+    name: eureka-ha
+
+  security:
+    user:
+      name: eureka
+      password: eureka
+

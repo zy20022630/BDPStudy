@@ -1,0 +1,10 @@
+server:
+  port: 9118
+
+
+eureka:
+  client:
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://eureka:eureka@eureka1:7001/eureka,http://eureka:eureka@eureka2:7002/eureka,http://eureka:eureka@eureka3:7003/eureka
+
