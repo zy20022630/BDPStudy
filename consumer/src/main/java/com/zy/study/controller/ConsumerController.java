@@ -28,8 +28,8 @@ public class ConsumerController {
     private RestTemplate restTemplate;
 
     //测试版本：V0.6
-//    @Resource
-//    private HttpHeaders httpHeaders;
+    @Resource
+    private HttpHeaders httpHeaders;
 
     @Resource
     private LoadBalancerClient loadBalancerClient;
