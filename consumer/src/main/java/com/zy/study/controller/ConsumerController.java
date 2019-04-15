@@ -27,7 +27,7 @@ public class ConsumerController {
     @Resource
     private RestTemplate restTemplate;
 
-    //测试版本：V0.11   ---test
+    //测试版本：V0.11   ---test --rebase合并
     @Resource
     private HttpHeaders httpHeaders;
 
